@@ -50,84 +50,88 @@ export default function Campaign() {
     }, [index]);
 
     return (
-        <div className="w-full h-screen flex flex-col items-center px-6 md:px-12">
-            <header className="absolute w-full flex justify-center">
+        <div className="fixed inset-0 overflow-hidden flex flex-col items-center px-6 md:px-12 mt-20">
+            <header className="w-full flex justify-center">
                 <h1 className="font-league font-bold text-black text-center leading-none m-0 p-0 text-4xl md:text-6xl lg:text-7xl">
                     {section}
                 </h1>
             </header>
 
             <main className="flex-1 w-full flex items-center justify-center">
-                <div className="relative w-full max-w-5xl">
-                    {/* Immagine grande rettangolare */}
-                    <div ref={imgWrapRef} className="w-full flex justify-center">
-                        {/* WRAPPER che prende la dimensione reale dell'immagine */}
-                        <div className="group relative inline-block w-fit">
-                            <img
-                                src={images[index].src}
-                                alt={images[index].title}
-                                onLoad={onImgLoad}
-                                className={[
-                                    "block w-auto h-auto object-contain",
-                                    "max-h-[72vh]",
-                                    orientation === "portrait" ? "max-w-[60vw]" : "max-w-[85vw]",
-                                ].join(" ")}
-                            />
+                {/* contenitore largo schermo */}
+                <div className="w-screen grid grid-cols-[1fr,minmax(0,64rem),1fr] items-center">
+                    {/* freccia sinistra al bordo */}
+                    <button
+                        type="button"
+                        onClick={prev}
+                        className="
+        justify-self-start
+        font-league text-black text-4xl
+        bg-transparent border-none p-0
+        outline-none focus:outline-none focus:ring-0
+      "
+                        aria-label="Previous image"
+                    >
+      <span className="material-symbols-outlined text-[48px] leading-none">
+        arrow_back_ios
+      </span>
+                    </button>
 
-                            {/* Overlay: ora è grande ESATTAMENTE quanto l'immagine */}
-                            <div
-                                className="
-            absolute inset-0 flex items-center justify-center
-            bg-black/40 opacity-0
-            transition-opacity duration-200
-            group-hover:opacity-100
-          "
-                            >
+                    {/* colonna centrale (equivalente del tuo max-w-5xl) */}
+                    <div className="w-full max-w-5xl mx-auto">
+                        <div ref={imgWrapRef} className="w-full flex justify-center">
+                            <div className="group relative inline-block w-fit">
+                                <img
+                                    src={images[index].src}
+                                    alt={images[index].title}
+                                    onLoad={onImgLoad}
+                                    className={[
+                                        "block w-auto h-auto object-contain",
+                                        "max-h-[62vh] md:max-h-[72vh]",
+                                        orientation === "portrait"
+                                            ? "max-w-[64vw] md:max-w-[60vw]"
+                                            : "max-w-[72vw] md:max-w-[85vw]",
+                                    ].join(" ")}
+                                />
+
                                 <div
                                     className="
-              text-white font-league text-2xl md:text-3xl
-              opacity-0 scale-95
-              transition duration-200
-              group-hover:opacity-100 group-hover:scale-100
+              absolute inset-0 flex items-center justify-center
+              bg-black/40 opacity-0
+              transition-opacity duration-200
+              group-hover:opacity-100
             "
                                 >
-                                    {images[index].title}
+                                    <div
+                                        className="
+                text-white font-league text-2xl md:text-3xl
+                opacity-0 scale-95
+                transition duration-200
+                group-hover:opacity-100 group-hover:scale-100
+              "
+                                    >
+                                        {images[index].title}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Frecce ai lati dello schermo */}
-                    <button
-                        type="button"
-                        onClick={prev}
-                        className="
-              fixed left-6 top-1/2 -translate-y-1/2
-              font-league text-black text-4xl
-              bg-transparent border-none p-0
-              outline-none focus:outline-none focus:ring-0
-            "
-                        aria-label="Previous image"
-                    >
-                        <span className="material-symbols-outlined text-[48px] leading-none">
-  arrow_back_ios
-</span>
-                    </button>
-
+                    {/* freccia destra al bordo */}
                     <button
                         type="button"
                         onClick={next}
                         className="
-              fixed right-6 top-1/2 -translate-y-1/2
-              font-league text-black text-4xl
-              bg-transparent border-none p-0
-              outline-none focus:outline-none focus:ring-0
-            "
+        justify-self-end
+        font-league text-black text-4xl
+        bg-transparent border-none p-0
+        outline-none focus:outline-none focus:ring-0
+      "
                         aria-label="Next image"
                     >
-                        <span className="material-symbols-outlined text-[48px] leading-none">
-  arrow_forward_ios
-</span>
+      <span className="material-symbols-outlined text-[48px] leading-none">
+        arrow_forward_ios
+      </span>
                     </button>
                 </div>
             </main>

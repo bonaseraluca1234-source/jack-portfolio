@@ -1,6 +1,6 @@
 export default function Contact() {
     return (
-        <div className="w-full h-screen flex flex-col items-center px-6 md:px-12">
+        <div className="fixed inset-0 overflow-hidden flex flex-col items-center px-6 md:px-12 mt-20">
             {/* Titolo: in alto e centrato */}
             <header className=" absolute w-full flex justify-center">
                 <h1 className="font-league font-bold text-black text-center leading-none m-0 p-0
