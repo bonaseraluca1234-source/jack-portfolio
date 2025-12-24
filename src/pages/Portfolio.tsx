@@ -1,11 +1,11 @@
 import {useLayoutEffect, useMemo, useRef, useState} from "react";
 import {useLocation} from "react-router-dom";
 import {gsap} from "gsap";
-import port1 from "./assets/images/port1.jpeg";
-import port2 from "./assets/images/port2.jpeg";
-import port3 from "./assets/images/port3.jpeg";
-import port4 from "./assets/images/port4.jpeg";
-import port5 from "./assets/images/port5.jpeg";
+import port1 from "../assets/images/port1.jpeg";
+import port2 from "../assets/images/port2.jpeg";
+import port3 from "../assets/images/port3.jpeg";
+import port4 from "../assets/images/port4.jpeg";
+import port5 from "../assets/images/port5.jpeg";
 
 export default function Portfolio() {
     const location = useLocation();
