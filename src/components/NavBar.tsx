@@ -76,7 +76,7 @@ function Navbar() {
             {showHome && (
                 <Link
                     className="font-league text-[1.7rem] md:text-[1.9rem] text-black hover:text-black"
-                    to="/"
+                    to="/jack-portfolio"
                 >
                     [HOME]
                 </Link>
@@ -104,7 +104,7 @@ function Navbar() {
                                         } // ora el è <a>
                                     }}
                                     state={{id: item.id, section: item.nextLabel}}
-                                    to={`/portfolio`}
+                                    to={`/jack-portfolio/portfolio`}
                                     className="
           group w-fit font-league text-black hover:text-black visited:text-black
           bg-transparent border-none p-0 leading-none
