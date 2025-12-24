@@ -1,6 +1,11 @@
 import {useLayoutEffect, useMemo, useRef, useState} from "react";
 import {useLocation} from "react-router-dom";
 import {gsap} from "gsap";
+import port1 from "./assets/images/port1.jpeg";
+import port2 from "./assets/images/port2.jpeg";
+import port3 from "./assets/images/port3.jpeg";
+import port4 from "./assets/images/port4.jpeg";
+import port5 from "./assets/images/port5.jpeg";
 
 export default function Portfolio() {
     const location = useLocation();
@@ -8,11 +13,11 @@ export default function Portfolio() {
 
     const images = useMemo(
         () => [
-            {src: "./src/assets/images/port1.jpeg", title: "EDITORIAL 01"},
-            {src: "./src/assets/images/port2.jpeg", title: "EDITORIAL 02"},
-            {src: "./src/assets/images/port3.jpeg", title: "EDITORIAL 03"},
-            {src: "./src/assets/images/port4.jpeg", title: "EDITORIAL 04"},
-            {src: "./src/assets/images/port5.jpeg", title: "EDITORIAL 05"},
+            {src: port1, title: "EDITORIAL 01"},
+            {src: port2, title: "EDITORIAL 02"},
+            {src: port3, title: "EDITORIAL 03"},
+            {src: port4, title: "EDITORIAL 04"},
+            {src: port5, title: "EDITORIAL 05"},
         ],
         []
     );
