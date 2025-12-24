@@ -104,7 +104,7 @@ function Navbar() {
                                         } // ora el è <a>
                                     }}
                                     state={{id: item.id, section: item.nextLabel}}
-                                    to={`/jack-portfolio/portfolio`}
+                                    to={`/jack-portfolio/${item.qs}`}
                                     className="
           group w-fit font-league text-black hover:text-black visited:text-black
           bg-transparent border-none p-0 leading-none

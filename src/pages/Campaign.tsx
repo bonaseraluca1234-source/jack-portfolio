@@ -3,13 +3,13 @@ import {useLocation} from "react-router-dom";
 import {gsap} from "gsap";
 
 const imageModules = import.meta.glob(
-    "../assets/images/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}",
+    "../assets/images/campaign/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}",
     {eager: true, import: "default"}
 ) as Record<string, string>;
 
-export default function Portfolio() {
+export default function Campaign() {
     const location = useLocation();
-    const section = location.state?.section ?? "PORTFOLIO";
+    const section = location.state?.section ?? "CAMPAIGN";
 
     const images = useMemo(() => {
         return Object.entries(imageModules)

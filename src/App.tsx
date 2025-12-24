@@ -5,7 +5,9 @@ import "./App.css";
 import Navbar from "./components/NavBar.tsx";
 import About from "./pages/About.tsx";
 import Contact from "./pages/Contact.jsx.tsx";
-import Portfolio from "./pages/Portfolio.tsx";
+import Campaign from "./pages/Campaign.tsx";
+import Shows from "./pages/Shows.tsx";
+import Editorials from "./pages/Editorials.tsx";
 
 function App() {
     return (
@@ -18,8 +20,10 @@ function App() {
                     <Route path="/jack-portfolio" element={<LandingPage/>}/>
                     <Route path="/jack-portfolio/gallery" element={<ImageGallery/>}/>
                     <Route path="/jack-portfolio/contact" element={<Contact/>}/>
-                    <Route path="/jack-portfolio/about" element={<About/>}/>
-                    <Route path="/jack-portfolio/portfolio" element={<Portfolio/>}/>
+                    <Route path="/jack-portfolio/about" element={<About/>}/>ì
+                    <Route path="/jack-portfolio/campaign" element={<Campaign/>}/>
+                    <Route path="/jack-portfolio/shows" element={<Shows/>}/>
+                    <Route path="/jack-portfolio/editorials" element={<Editorials/>}/>
                 </Routes>
             </Router>
 
