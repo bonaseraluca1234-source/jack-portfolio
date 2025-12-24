@@ -131,14 +131,14 @@ function Navbar() {
 
                 <Link
                     className="font-league text-[1.7rem] md:text-[1.9rem] text-black focus:outline-none focus:ring-0 focus:ring-transparent hover:text-black"
-                    to="/about"
+                    to="/jack-portfolio/about"
                 >
                     [ABOUT]
                 </Link>
 
                 <Link
                     className="font-league text-[1.7rem] md:text-[1.9rem] text-black focus:outline-none focus:ring-0 focus:ring-transparent hover:text-black"
-                    to="/contact"
+                    to="/jack-portfolio/contact"
                 >
                     [CONTACT]
                 </Link>
