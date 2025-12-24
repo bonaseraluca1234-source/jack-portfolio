@@ -9,7 +9,7 @@ function Navbar() {
     const itemsRef = useRef<HTMLButtonElement[]>([]);
     const containerRef = useRef<HTMLDivElement>(null);
     const navRef = useRef<HTMLDivElement>(null);
-    const showHome = location.pathname !== "/";
+    const showHome = location.pathname !== "/jack-portfolio";
 
     // ✅ Chiudi menu cliccando fuori
     useEffect(() => {
@@ -99,7 +99,9 @@ function Navbar() {
                                     key={item.qs}
                                     onClick={() => setOpen(false)}
                                     ref={(el) => {
-                                        if (el) itemsRef.current[i] = el; // ora el è <a>
+                                        if (el) { // @ts-ignore
+                                            itemsRef.current[i] = el;
+                                        } // ora el è <a>
                                     }}
                                     state={{id: item.id, section: item.nextLabel}}
                                     to={`/portfolio`}

@@ -15,11 +15,11 @@ function App() {
                 <Navbar/>
 
                 <Routes>
-                    <Route path="/" element={<LandingPage/>}/>
-                    <Route path="/gallery" element={<ImageGallery/>}/>
-                    <Route path="/contact" element={<Contact/>}/>
-                    <Route path="/about" element={<About/>}/>
-                    <Route path="/portfolio" element={<Portfolio/>}/>
+                    <Route path="/jack-portfolio" element={<LandingPage/>}/>
+                    <Route path="/jack-portfolio/gallery" element={<ImageGallery/>}/>
+                    <Route path="/jack-portfolio/contact" element={<Contact/>}/>
+                    <Route path="/jack-portfolio/about" element={<About/>}/>
+                    <Route path="/jack-portfolio/portfolio" element={<Portfolio/>}/>
                 </Routes>
             </Router>
 
