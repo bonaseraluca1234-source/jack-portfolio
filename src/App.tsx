@@ -8,6 +8,7 @@ import Contact from "./pages/Contact.jsx.tsx";
 import Campaign from "./pages/Campaign.tsx";
 import Shows from "./pages/Shows.tsx";
 import Editorials from "./pages/Editorials.tsx";
+import PersonalProject from "./pages/PersonalProject.tsx";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                     <Route path="/jack-portfolio/campaign" element={<Campaign/>}/>
                     <Route path="/jack-portfolio/shows" element={<Shows/>}/>
                     <Route path="/jack-portfolio/editorials" element={<Editorials/>}/>
+                    <Route path="/jack-portfolio/personal-project" element={<PersonalProject/>}/>
                 </Routes>
             </Router>
 
